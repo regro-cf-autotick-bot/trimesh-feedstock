@@ -1,6 +1,6 @@
 {% set name = "trimesh" %}
-{% set version = "3.5.24" %}
-{% set sha256 = "f1e46a57d84e15ef50e7a657304c4ec3551be8ea8ab3807c833af180eff59cb9" %}
+{% set version = "3.5.25" %}
+{% set sha256 = "d279bd7a82ea0d8c34bcfe8906df6939b11a6692060429eea26016a432f56863" %}
 
 package:
   name: {{ name|lower }}
@@ -56,7 +56,7 @@ about:
   #
   # https://github.com/mikedh/trimesh/pull/176
   license_file: LICENSE.md
-  summary: 'Import, export, process, analyze and view triangular meshes.'
+  summary: Import, export, process, analyze and view triangular meshes.
   dev_url: https://github.com/mikedh/trimesh
 
 extra:
