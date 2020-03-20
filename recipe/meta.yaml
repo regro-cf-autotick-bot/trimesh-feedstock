@@ -1,6 +1,6 @@
 {% set name = "trimesh" %}
-{% set version = "3.6.10" %}
-{% set sha256 = "440f81a8c23dc312d05bcbca343af321d84dec9a78c509113602313ed0b456b9" %}
+{% set version = "3.6.11" %}
+{% set sha256 = "37df3ca9ad00e565355e0eaa6acf81b087500154bfa943dc5920784c5d2895c7" %}
 
 package:
   name: {{ name|lower }}
