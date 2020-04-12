@@ -13,24 +13,41 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
-
 requirements:
-  build: [python, pip]
-  run: [python, numpy]
-  run_constrained: [xxhash, jsonschema, colorlog, pycollada, psutil, sympy, scikit-image,
-    lxml, shapely, networkx, requests, scipy, pillow, meshio, pyglet, rtree, setuptools,
-    chardet, msgpack-python, triangle]
-
-
-
+  build:
+  - python
+  - pip
+  run:
+  - python
+  - numpy
+  run_constrained:
+  - meshio
+  - pyglet
+  - lxml
+  - scikit-image
+  - shapely
+  - rtree
+  - networkx
+  - pycollada
+  - chardet
+  - jsonschema
+  - msgpack-python
+  - xxhash
+  - scipy
+  - sympy
+  - pillow
+  - colorlog
+  - requests
+  - psutil
+  - triangle
+  - setuptools
 
 test:
   commands:
     - python -c "import trimesh"
-
 
 about:
   home: https://github.com/mikedh/trimesh

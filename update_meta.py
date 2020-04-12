@@ -97,15 +97,20 @@ if __name__ == '__main__':
 
     # find the existing set of `run_constrained` package requirements
     existing = set(load['requirements']['run_constrained'])
-    if existing != ok:
-        print('packages changed: ', ok.symmetric_difference(existing))
-        load['requirements']['run_constrained'] = list(ok)
 
-        # compile result back into jinja2-template
-        wangled = '\n'.join([text[:start], yaml.dump(load), text[end:]])
-        print(f'\n\n{wangled}\n\n')
+    print('packages changed: ', ok.symmetric_difference(existing))
+    load['requirements']['run_constrained'] = list(ok)
 
-        # only write the result if the user says yes
-        if (input(f'write to {meta_path}? (y/n)').lower().strip() == 'y'):
-            with open(meta_path, 'w') as f:
-                f.write(wangled)
+    # compile result back into jinja2-template
+    wangled = '\n'.join([text[:start],
+                         yaml.dump(load, default_flow_style=False),
+                         text[end:]]).strip()
+    # cheap hack to replace 2+ blank lines with a single blank line
+    for i in range(10):
+        wangled = wangled.replace('\n\n\n', '\n\n')
+    print(f'\n\n{wangled}\n\n')
+
+    # only write the result if the user says yes
+    if (input(f'write to {meta_path}? (y/n)').lower().strip() == 'y'):
+        with open(meta_path, 'w') as f:
+            f.write(wangled)
