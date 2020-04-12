@@ -24,26 +24,26 @@ requirements:
   - python
   - numpy
   run_constrained:
-  - meshio
-  - pyglet
-  - lxml
   - scikit-image
-  - shapely
-  - rtree
-  - networkx
-  - pycollada
-  - chardet
-  - jsonschema
   - msgpack-python
-  - xxhash
-  - scipy
-  - sympy
-  - pillow
-  - colorlog
   - requests
-  - psutil
-  - triangle
+  - pycollada
+  - shapely
+  - colorlog
+  - meshio
   - setuptools
+  - sympy
+  - jsonschema
+  - lxml
+  - xxhash
+  - rtree
+  - pyglet
+  - triangle
+  - psutil
+  - networkx
+  - scipy
+  - pillow
+  - chardet
 
 test:
   commands:

@@ -104,7 +104,7 @@ if __name__ == '__main__':
     # compile result back into jinja2-template
     wangled = '\n'.join([text[:start],
                          yaml.dump(load, default_flow_style=False),
-                         text[end:]]).strip()
+                         text[end:]]).strip() + '\n'
     # cheap hack to replace 2+ blank lines with a single blank line
     for i in range(10):
         wangled = wangled.replace('\n\n\n', '\n\n')
