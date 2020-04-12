@@ -16,29 +16,15 @@ build:
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
+
 requirements:
-  build:
-    - python
-    - pip
-  run:
-    - python
-    - numpy
-    - networkx
-    - scipy
-  run_constrained:
-    - lxml
-    - pyglet
-    - Shapely
-    - rtree
-    - sympy
-    - msgpack-python
-    - colorlog
-    - python-xxhash
-    - pillow
-    # these deps are not yet available on conda-forge
-    # - python-fcl
-    # - svg.path
-    # - meshpy
+  build: [python, pip]
+  run: [python, numpy]
+  run_constrained: [xxhash, jsonschema, colorlog, pycollada, psutil, sympy, scikit-image,
+    lxml, shapely, networkx, requests, scipy, pillow, meshio, pyglet, rtree, setuptools,
+    chardet, msgpack-python, triangle]
+
+
 
 
 test:
