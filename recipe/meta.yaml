@@ -13,38 +13,41 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 2
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
-    - python
-    - pip
+  - python
+  - pip
   run:
-    - python
-    - numpy
-    - networkx
-    - scipy
+  - python
+  - numpy
   run_constrained:
-    - lxml
-    - pyglet
-    - Shapely
-    - rtree
-    - sympy
-    - msgpack-python
-    - colorlog
-    - python-xxhash
-    - pillow
-    # these deps are not yet available on conda-forge
-    # - python-fcl
-    # - svg.path
-    # - meshpy
-
+  - scikit-image
+  - msgpack-python
+  - requests
+  - pycollada
+  - shapely
+  - colorlog
+  - meshio
+  - setuptools
+  - sympy
+  - jsonschema
+  - lxml
+  - xxhash
+  - rtree
+  - pyglet
+  - triangle
+  - psutil
+  - networkx
+  - scipy
+  - pillow
+  - chardet
 
 test:
   commands:
     - python -c "import trimesh"
-
 
 about:
   home: https://github.com/mikedh/trimesh
