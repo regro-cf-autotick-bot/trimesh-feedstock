@@ -5,11 +5,11 @@ Home: https://github.com/mikedh/trimesh
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/trimesh-feedstock/blob/master/LICENSE.txt)
 
 Summary: Import, export, process, analyze and view triangular meshes.
 
-
+Development: https://github.com/mikedh/trimesh
 
 Current build status
 ====================
