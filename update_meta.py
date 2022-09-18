@@ -93,7 +93,7 @@ if __name__ == '__main__':
     # look for ending whitespace- this is brittle!
     end = text.find('\n\n', start)
     # load requirements section from YAML
-    load = yaml.load(text[start:end])
+    load = yaml.safe_load(text[start:end])
 
     # find the existing set of `run_constrained` package requirements
     existing = set(load['requirements']['run_constrained'])

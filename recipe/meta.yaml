@@ -18,32 +18,32 @@ build:
 
 requirements:
   host:
-    - python
-    - pip
+  - python
+  - pip
   run:
-    - python
-    - numpy
+  - python
+  - numpy
   run_constrained:
-    - scikit-image
-    - msgpack-python
-    - requests
-    - pycollada
-    - shapely
-    - colorlog
-    - meshio
-    - setuptools
-    - sympy
-    - jsonschema
-    - lxml
-    - xxhash
-    - rtree
-    - pyglet
-    - triangle
-    - psutil
-    - networkx
-    - scipy
-    - pillow
-    - chardet
+  - scipy
+  - sympy
+  - requests
+  - setuptools
+  - xxhash
+  - lxml
+  - pillow
+  - scikit-image
+  - shapely
+  - meshio
+  - psutil
+  - pycollada
+  - colorlog
+  - svg.path
+  - networkx
+  - jsonschema
+  - rtree
+  - msgpack-python
+  - pyglet
+  - chardet
 
 test:
   commands:
