@@ -32,7 +32,8 @@ def feedstock_name(package):
     package = package.lower().strip()
 
     # map packages to different name if known here
-    name_map = {'msgpack': 'msgpack-python'}
+    name_map = {'msgpack': 'msgpack-python',
+                'mapbox-earcut': 'mapbox_earcut'}
     if package in name_map:
         package = name_map[package]
 

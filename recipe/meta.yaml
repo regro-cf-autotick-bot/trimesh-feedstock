@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -24,26 +24,27 @@ requirements:
   - python
   - numpy
   run_constrained:
-  - scipy
-  - sympy
-  - requests
-  - setuptools
-  - xxhash
-  - lxml
-  - pillow
-  - scikit-image
-  - shapely
-  - meshio
-  - psutil
-  - pycollada
-  - colorlog
-  - svg.path
-  - networkx
   - jsonschema
-  - rtree
-  - msgpack-python
-  - pyglet
+  - mapbox_earcut
+  - setuptools
+  - scipy
+  - pycollada
+  - networkx
   - chardet
+  - svg.path
+  - xxhash
+  - pillow
+  - psutil
+  - rtree
+  - pyglet
+  - sympy
+  - meshio
+  - msgpack-python
+  - shapely
+  - requests
+  - lxml
+  - colorlog
+  - scikit-image
 
 test:
   commands:
