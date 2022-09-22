@@ -1,6 +1,6 @@
 {% set name = "trimesh" %}
-{% set version = "3.14.1" %}
-{% set sha256 = "4fea637f62a61da6dbbbca6857a77102f6aee42ea1f3d169dae600b8efb7e3f6" %}
+{% set version = "3.15.2" %}
+{% set sha256 = "467a879aa176f6bd5553cb3ddb49b1404f347f690928726d326462d51d9c6803" %}
 
 package:
   name: {{ name|lower }}
@@ -13,38 +13,38 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-  - python
-  - pip
+    - python
+    - pip
   run:
-  - python
-  - numpy
+    - python
+    - numpy
   run_constrained:
-  - jsonschema
-  - mapbox_earcut
-  - setuptools
-  - scipy
-  - pycollada
-  - networkx
-  - chardet
-  - svg.path
-  - xxhash
-  - pillow
-  - psutil
-  - rtree
-  - pyglet
-  - sympy
-  - meshio
-  - msgpack-python
-  - shapely
-  - requests
-  - lxml
-  - colorlog
-  - scikit-image
+    - jsonschema
+    - mapbox_earcut
+    - setuptools
+    - scipy
+    - pycollada
+    - networkx
+    - chardet
+    - svg.path
+    - xxhash
+    - pillow
+    - psutil
+    - rtree
+    - pyglet
+    - sympy
+    - meshio
+    - msgpack-python
+    - shapely
+    - requests
+    - lxml
+    - colorlog
+    - scikit-image
 
 test:
   commands:
