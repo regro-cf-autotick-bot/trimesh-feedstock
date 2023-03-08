@@ -1,11 +1,11 @@
-About trimesh
-=============
+About trimesh-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/trimesh-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/mikedh/trimesh
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/trimesh-feedstock/blob/main/LICENSE.txt)
 
 Summary: Import, export, process, analyze and view triangular meshes.
 
